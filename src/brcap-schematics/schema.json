@@ -1,0 +1,28 @@
+{
+	"$schema": "http://json-schema.org/schema",
+	"$id": "BrcapSchematic",
+	"title": "My Service Schema",
+	"type": "object",
+	"properties": {
+		"name": {
+			"description": "The name of the service.",
+			"type": "string"
+		},
+		"spec": {
+			"type": "string",
+			"description": "Especifica se um arquivo spec e gerado",
+			"default": "true"
+		},
+		"path": {
+			"type": "string",
+			"description": "Especifica o caminho para criar o modulo",
+			"default": ""
+		},
+		"project": {
+			"type": "string",
+			"description": "Especifica o projeto que vai rodar o schematic",
+			"default": "defaultProject"
+		}
+	},
+	"required": [ "name" ]
+}
