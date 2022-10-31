@@ -1,10 +1,10 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "brcap-schematics": {
-      "description": "A blank schematic.",
-      "factory": "./brcap-schematics/index#brcapSchematics",
-      "schema": "./brcap-schematics/schema.json"
+    "feature-module": {
+      "description": "Gerador de features modules",
+      "factory": "./feature-module/index#featuresModule",
+      "schema": "./feature-module/schema.json"
     }
   }
 }

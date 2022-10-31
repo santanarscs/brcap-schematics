@@ -1,28 +1,36 @@
-# Getting Started With Schematics
+# Instalação
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
-
-### Testing
-
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
-
-Check the documentation with
-
-```bash
-schematics --help
+```
+npm install brcap-schematics
 ```
 
-### Unit Testing
+## Comandos disponiveis
 
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
+```
+ng g brcap-schematics:feature-module
 ```
 
-That's it!
+## Exemplo
+
+```
+ng g brcap-schematics:feature-module --name=<nome-do-modulo> --path=src/app/features
+```
+
+## Pós-gerar código
+
+- Adicione o feature módulo recém criado no app modulo ou modulo pai
+
+```
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppComponent } from "./app.component";
+import { ModuloCriadoModule } from "caminho-do-modulo/ModuloCriadoModule";
+
+NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule,  ModuloCriadoModule],
+  bootstrap: [AppComponent],
+});
+export class AppModule {}
+
+```
